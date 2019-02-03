@@ -1,6 +1,11 @@
 # Homebrew for ffizer
 
+To install
 
+```sh
+brew tap ffizer/ffizer
+brew install ffizer-bin
+```
 
 ## Notes
 
