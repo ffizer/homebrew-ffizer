@@ -8,7 +8,7 @@ class FfizerBin < Formula
       url "#{homepage}/releases/download/#{version}/ffizer_#{version}-x86_64-apple-darwin.tar.gz"
       # sha256 ""
   elsif OS.linux?
-      url "#{homepage}/releases/download/#{version}/ffizer_#{version}-x86_64-unknown-linux-musl.tar.gz"
+      url "#{homepage}/releases/download/#{version}/ffizer_#{version}-x86_64-unknown-linux-gnu.tar.gz"
       # sha256 ""
   end
 
