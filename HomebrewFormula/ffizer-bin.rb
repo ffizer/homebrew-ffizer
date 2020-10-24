@@ -1,5 +1,5 @@
 class FfizerBin < Formula
-  version '1.5.1'
+  version '2.0.0'
   desc "ffizer is a files and folders initializer / generator. Create any kind (or part) of project from template."
   homepage "https://github.com/ffizer/ffizer"
   bottle :unneeded

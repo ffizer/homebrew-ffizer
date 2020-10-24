@@ -9,11 +9,11 @@ brew install ffizer-bin
 
 ## Notes
 
-Documentation: 
+Documentation
 
 - [How to Create and Maintain a Tap — Homebrew Documentation](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap)
 - [Formula Cookbook — Homebrew Documentation](https://docs.brew.sh/Formula-Cookbook)
-- https://www.rubydoc.info/github/Homebrew/brew/master/Formula
+- <https://www.rubydoc.info/github/Homebrew/brew/master/Formula>
 
 before submitting:
 
