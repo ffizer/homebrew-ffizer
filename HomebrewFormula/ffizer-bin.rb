@@ -24,6 +24,6 @@ class FfizerBin < Formula
   end
 
   test do
-    system "#{bin}/program", "--help"
+    system "#{bin}/ffizer", "--help"
   end
 end
