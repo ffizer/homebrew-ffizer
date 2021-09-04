@@ -22,6 +22,6 @@ jobs:
           # tag: ${{ github.event.inputs.tag-name }}
       - uses: peter-evans/create-pull-request@v3
         with:
-          title: "Update 'into-docker' formula (${{ steps.formula.outputs.version }})"
-          commit-message: "Formula: into-docker@${{ steps.formula.outputs.version }}"
-          branch: "update-formula/into-docker-${{ steps.formula.outputs.version }}"
+          title: "Update 'ffizer' formula (${{ steps.formula.outputs.version }})"
+          commit-message: ":arrow_up: update formula for ffizer@${{ steps.formula.outputs.version }}"
+          branch: "update-formula/ffizer-${{ steps.formula.outputs.version }}"
