@@ -1,15 +1,15 @@
 class FfizerBin < Formula
-  version '2.0.0'
+  version 'HOMEBREW_VERSION'
   desc "ffizer is a files and folders initializer / generator. Create any kind (or part) of project from template."
   homepage "https://github.com/ffizer/ffizer"
   bottle :unneeded
 
   if OS.mac?
-      url "#{homepage}/releases/download/#{version}/ffizer_#{version}-x86_64-apple-darwin.tar.gz"
-      # sha256 ""
+      url "HOMEBREW_ASSET_URL"
+      sha256 "HOMEBREW_SHA256"
   elsif OS.linux?
-      url "#{homepage}/releases/download/#{version}/ffizer_#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      # sha256 ""
+      url "HOMEBREW_ASSET_URL_ALT"
+      sha256 "HOMEBREW_SHA256_ALT"
   end
 
   #conflicts_with "ffizer"
