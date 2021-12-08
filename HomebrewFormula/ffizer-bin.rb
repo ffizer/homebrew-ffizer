@@ -2,7 +2,7 @@ class FfizerBin < Formula
   version "2.4.1"
   desc "ffizer is a files and folders initializer / generator. Create any kind (or part) of project from template."
   homepage "https://github.com/ffizer/ffizer"
-  bottle :unneeded
+  #bottle :unneeded
 
   if OS.mac?
       url "https://github.com/ffizer/ffizer/releases/download/2.4.1/ffizer_2.4.1-x86_64-apple-darwin.tar.gz"
