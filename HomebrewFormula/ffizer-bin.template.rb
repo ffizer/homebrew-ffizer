@@ -2,7 +2,7 @@ class FfizerBin < Formula
   version "${HOMEBREW_VERSION}"
   desc "ffizer is a files and folders initializer / generator. Create any kind (or part) of project from template."
   homepage "https://github.com/ffizer/ffizer"
-  bottle :unneeded
+  #bottle :unneeded
 
   if OS.mac?
       url "${HOMEBREW_ASSET_URL}"
