@@ -17,7 +17,7 @@ shasum_of() {
     local TMP_FILE=/tmp/shasum_tmp
     rm -f "$TMP_FILE" || true
     curl -SL --fail-with-body --output "$TMP_FILE" "$URL"
-    sha256sum "$TMP_FILE"
+    sha256sum "$TMP_FILE" | cut -d' ' -f1
     rm -f "$TMP_FILE" || true
 }
 
