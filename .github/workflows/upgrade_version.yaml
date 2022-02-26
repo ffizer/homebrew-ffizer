@@ -11,15 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.4.0
-      - uses: xsc/homebrew-import-release-action@v2
+      - name: update formula
         id: formula
-        with:
-          template: HomebrewFormula/ffizer-bin.template.rb
-          target: HomebrewFormula/ffizer-bin.rb
-          repository: ffizer/ffizer
-          asset-selector: -x86_64-apple-darwin.tar.gz
-          alt-asset-selector: -x86_64-unknown-linux-gnu.tar.gz
-          # tag: ${{ github.event.inputs.tag-name }}
+        run: bash make-formula.sh
       - uses: peter-evans/create-pull-request@v3
         with:
           title: "Update 'ffizer' formula (${{ steps.formula.outputs.version }})"
