@@ -16,7 +16,7 @@ shasum_of() {
     local URL=$1
     local TMP_FILE=/tmp/shasum_tmp
     rm -f "$TMP_FILE" || true
-    curl --fail-with-body --silent --output "$TMP_FILE" "$URL"
+    curl -SL --fail-with-body --output "$TMP_FILE" "$URL"
     sha256sum "$TMP_FILE"
     rm -f "$TMP_FILE" || true
 }
@@ -34,12 +34,12 @@ class FfizerBin < Formula
   version "${VERSION}"
   desc "ffizer is a files and folders initializer / generator. Create any kind (or part) of project from template."
   homepage "https://github.com/${GITHUB_USER}/${GITHUB_REPO}"
-  bottle :unneeded
+  #bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
       url "$HOMEBREW_ASSET_URL_x86_64_apple_darwin"
       sha256 "$HOMEBREW_ASSET_SHA256_x86_64_apple_darwin"
-  if OS.mac?
+  elsif OS.mac?
       url "$HOMEBREW_ASSET_URL_aarch64_apple_darwin"
       sha256 "$HOMEBREW_ASSET_SHA256_aarch64_apple_darwin"
   elsif OS.linux?
