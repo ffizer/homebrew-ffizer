@@ -7,19 +7,19 @@
 class FfizerBin < Formula
   desc "Generate or update files, folders (and project) from templates with ffizer"
   homepage "https://github.com/ffizer/ffizer"
-  version "2.4.4"
+  version "2.5.0"
   license "CC0-1.0"
   # bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ffizer/ffizer/releases/download/2.4.4/ffizer_2.4.4-x86_64-apple-darwin.tar.gz"
-    sha256 "250cf118371f4b7d7559b40aa622d060c7e156ac59d89202790a1d52f31db7f0"
+    url "https://github.com/ffizer/ffizer/releases/download/2.5.0/ffizer_2.5.0-x86_64-apple-darwin.tar.gz"
+    sha256 "71e423256b3af58bc8cc32d4bd1ed3186b1950f62e5c689a43c22263275d330a"
   elsif OS.mac?
-    url "https://github.com/ffizer/ffizer/releases/download/2.4.4/ffizer_2.4.4-aarch64-apple-darwin.tar.gz"
-    sha256 "e079ed4a83f1e09b75a742b903f00b99a5b3989a1c6935b8b031ceb38f70c4be"
+    url "https://github.com/ffizer/ffizer/releases/download/2.5.0/ffizer_2.5.0-aarch64-apple-darwin.tar.gz"
+    sha256 "6eaf8529e493357f5de9c6176d4464d2653d20f3b98e62d473442658875f8b37"
   elsif OS.linux?
-    url "https://github.com/ffizer/ffizer/releases/download/2.4.4/ffizer_2.4.4-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "96799ace73edb16a056503c1bcb056ba616477b809630e41af67107f798043e6"
+    url "https://github.com/ffizer/ffizer/releases/download/2.5.0/ffizer_2.5.0-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "316e209c66ab1e16c4888f70b92aa0aceefccccd7b0260611497f3e7cd83c107"
   end
 
   # conflicts_with "ffizer"
