@@ -22,11 +22,11 @@ shasum_of() {
 }
 
 VERSION=${1:-$(get_latest_release)}
-HOMEBREW_ASSET_URL_x86_64_apple_darwin="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/${GITHUB_REPO}_${VERSION}-x86_64-apple-darwin.tar.gz"
+HOMEBREW_ASSET_URL_x86_64_apple_darwin="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/${GITHUB_REPO}_${VERSION}-x86_64-apple-darwin.tgz"
 HOMEBREW_ASSET_SHA256_x86_64_apple_darwin=$(shasum_of "$HOMEBREW_ASSET_URL_x86_64_apple_darwin")
-HOMEBREW_ASSET_URL_aarch64_apple_darwin="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/${GITHUB_REPO}_${VERSION}-aarch64-apple-darwin.tar.gz"
+HOMEBREW_ASSET_URL_aarch64_apple_darwin="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/${GITHUB_REPO}_${VERSION}-aarch64-apple-darwin.tgz"
 HOMEBREW_ASSET_SHA256_aarch64_apple_darwin=$(shasum_of "$HOMEBREW_ASSET_URL_aarch64_apple_darwin")
-HOMEBREW_ASSET_URL_x86_64_unknown_linux_gnu="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/${GITHUB_REPO}_${VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+HOMEBREW_ASSET_URL_x86_64_unknown_linux_gnu="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/${GITHUB_REPO}_${VERSION}-x86_64-unknown-linux-gnu.tgz"
 HOMEBREW_ASSET_SHA256_x86_64_unknown_linux_gnu=$(shasum_of "$HOMEBREW_ASSET_URL_x86_64_unknown_linux_gnu")
 
 cat >HomebrewFormula/ffizer-bin.rb <<EOF
