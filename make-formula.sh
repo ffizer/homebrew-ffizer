@@ -26,8 +26,10 @@ HOMEBREW_ASSET_URL_x86_64_apple_darwin="https://github.com/${GITHUB_USER}/${GITH
 HOMEBREW_ASSET_SHA256_x86_64_apple_darwin=$(shasum_of "$HOMEBREW_ASSET_URL_x86_64_apple_darwin")
 HOMEBREW_ASSET_URL_aarch64_apple_darwin="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/${GITHUB_REPO}_${VERSION}-aarch64-apple-darwin.tgz"
 HOMEBREW_ASSET_SHA256_aarch64_apple_darwin=$(shasum_of "$HOMEBREW_ASSET_URL_aarch64_apple_darwin")
-HOMEBREW_ASSET_URL_x86_64_unknown_linux_gnu="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/${GITHUB_REPO}_${VERSION}-x86_64-unknown-linux-gnu.tgz"
-HOMEBREW_ASSET_SHA256_x86_64_unknown_linux_gnu=$(shasum_of "$HOMEBREW_ASSET_URL_x86_64_unknown_linux_gnu")
+HOMEBREW_ASSET_URL_x86_64_unknown_linux_musl="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/${GITHUB_REPO}_${VERSION}-x86_64-unknown-linux-musl.tgz"
+HOMEBREW_ASSET_SHA256_x86_64_unknown_linux_musl=$(shasum_of "$HOMEBREW_ASSET_URL_x86_64_unknown_linux_musl")
+HOMEBREW_ASSET_URL_aarch64_unknown_linux_musl="https://github.com/${GITHUB_USER}/${GITHUB_REPO}/releases/download/${VERSION}/${GITHUB_REPO}_${VERSION}-aarch64-unknown-linux-musl.tgz"
+HOMEBREW_ASSET_SHA256_aarch64_unknown_linux_musl=$(shasum_of "$HOMEBREW_ASSET_URL_aarch64_unknown_linux_musl")
 
 cat >HomebrewFormula/ffizer-bin.rb <<EOF
 # frozen_string_literal: true
@@ -49,9 +51,12 @@ class FfizerBin < Formula
   elsif OS.mac?
     url "$HOMEBREW_ASSET_URL_aarch64_apple_darwin"
     sha256 "$HOMEBREW_ASSET_SHA256_aarch64_apple_darwin"
+  elsif OS.linux? && Hardware::CPU.intel?
+    url "${HOMEBREW_ASSET_URL_x86_64_unknown_linux_musl}"
+    sha256 "${HOMEBREW_ASSET_SHA256_x86_64_unknown_linux_musl}"
   elsif OS.linux?
-    url "${HOMEBREW_ASSET_URL_x86_64_unknown_linux_gnu}"
-    sha256 "${HOMEBREW_ASSET_SHA256_x86_64_unknown_linux_gnu}"
+    url "${HOMEBREW_ASSET_URL_aarch64_unknown_linux_musl}"
+    sha256 "${HOMEBREW_ASSET_SHA256_aarch64_unknown_linux_musl}"
   end
 
   # conflicts_with "${GITHUB_REPO}"
