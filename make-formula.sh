@@ -76,4 +76,4 @@ class FfizerBin < Formula
 end
 EOF
 
-echo "::set-output name=version::${VERSION}"
+echo "version=${VERSION}" >>"$GITHUB_OUTPUT"
