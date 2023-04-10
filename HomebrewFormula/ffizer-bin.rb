@@ -7,22 +7,22 @@
 class FfizerBin < Formula
   desc "Generate or update files, folders (and project) from templates with ffizer"
   homepage "https://github.com/ffizer/ffizer"
-  version "2.10.2"
+  version "2.10.3"
   license "CC0-1.0"
   # bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ffizer/ffizer/releases/download/2.10.2/ffizer_2.10.2-x86_64-apple-darwin.tgz"
-    sha256 "16a776eb18b5c940185f0341066be604613640b5c543f54c7c8994b1441163f0"
+    url "https://github.com/ffizer/ffizer/releases/download/2.10.3/ffizer_2.10.3-x86_64-apple-darwin.tgz"
+    sha256 "b88f89053ab6954ca5b04a32df889871bf2ba3c6db8619ea9e9ccf8bde970de7"
   elsif OS.mac?
-    url "https://github.com/ffizer/ffizer/releases/download/2.10.2/ffizer_2.10.2-aarch64-apple-darwin.tgz"
-    sha256 "7d6bc2b0263f9aea40ff5571ee9496648cc2f9c41fd7a290b963f248da5762c3"
+    url "https://github.com/ffizer/ffizer/releases/download/2.10.3/ffizer_2.10.3-aarch64-apple-darwin.tgz"
+    sha256 "a04897869f1682b57d5c814d81e5d5be35e1f09c06c8ad55cd5084ad6da17c49"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ffizer/ffizer/releases/download/2.10.2/ffizer_2.10.2-x86_64-unknown-linux-musl.tgz"
-    sha256 "8d4d88c514db3833ad5934af2c0f4aa3d6552168c16028cd187f4240844ddd9c"
+    url "https://github.com/ffizer/ffizer/releases/download/2.10.3/ffizer_2.10.3-x86_64-unknown-linux-gnu.tgz"
+    sha256 "5b54f001b18eba8b7448b4e5b4a9c27fb0fca3e94617cae348cb11411949d9d6"
   elsif OS.linux?
-    url "https://github.com/ffizer/ffizer/releases/download/2.10.2/ffizer_2.10.2-aarch64-unknown-linux-musl.tgz"
-    sha256 "1d37f1e7b07f25f222e01d3068855cb5b0f1f124d2bbab76bd0599ddf1e80bb5"
+    url "https://github.com/ffizer/ffizer/releases/download/2.10.3/ffizer_2.10.3-aarch64-unknown-linux-musl.tgz"
+    sha256 "d72d00676fabc04b17e07d758181bad23e9d4b4621baa124a5717b9d6969d4d6"
   end
 
   # conflicts_with "ffizer"
