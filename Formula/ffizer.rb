@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.9.0 at 2023-12-10T16:24:28.485555472Z
+# Generated with JReleaser 1.9.0 at 2023-12-10T16:34:31.499402264Z
 class Ffizer < Formula
   desc "ffizer is a files and folders initializer / generator."
   homepage "https://ffizer.github.io/ffizer/book/"
@@ -7,7 +7,7 @@ class Ffizer < Formula
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-aarch64-unknown-linux-gnu.tgz"
-    sha256 "df50848efba97ce8d3a21a8d40b2efb1c9e3e5057a2b461d60590387a19b74b4"
+    sha256 "75d766367ad7cf8b9e8afcf7cc9bc0be6546c585b2e2cda419fee55aa722f7d5"
 
     def install
       bin.install "ffizer_2.12.0-aarch64-unknown-linux-gnu" => "ffizer"
@@ -15,7 +15,7 @@ class Ffizer < Formula
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-x86_64-unknown-linux-gnu.tgz"
-    sha256 "00716d6d1a1d82c5bed02c7fbe87e201aee6064b57edc8dbda9b52b8f9baa3bc"
+    sha256 "0af62bfd31cb45b146479e389966c38ea3fbd90d68515b9175618633377474e2"
 
     def install
       bin.install "ffizer_2.12.0-x86_64-unknown-linux-gnu" => "ffizer"
@@ -23,7 +23,7 @@ class Ffizer < Formula
   end
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-all-apple-darwin.tgz"
-    sha256 "9f54d2fd508aa7fc9a9586cc26b437c42bc1310d2dc6b1e1f9a80ced4421eff6"
+    sha256 "1c59afba6ef0bed3a491a3b67e9d610cf495e8a7c1a19116782e94ada22f77b0"
 
     def install
       bin.install "ffizer_2.12.0-all-apple-darwin" => "ffizer"
@@ -31,7 +31,7 @@ class Ffizer < Formula
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-aarch64-apple-darwin.tgz"
-    sha256 "f673d111ef42f137f3a64de221e2f9161752a03e29a197dd5830782a1ba385d2"
+    sha256 "2b77a57bc81b03f1ec2fbf18ca90e80cb8ffd3d2aad943331462ed3a898afa42"
 
     def install
       bin.install "ffizer_2.12.0-aarch64-apple-darwin" => "ffizer"
@@ -39,7 +39,7 @@ class Ffizer < Formula
   end
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-x86_64-apple-darwin.tgz"
-    sha256 "774684c6a0b16f9ef001a71e607b8bc83837817df5a9af8e96f077acd3379721"
+    sha256 "2c446b95e2cc1e4528d8e5e1ca2ca8563364bf6d06c1e10855c6c7e0b7e8587d"
 
     def install
       bin.install "ffizer_2.12.0-x86_64-apple-darwin" => "ffizer"
