@@ -4,20 +4,20 @@
 Invoke either of the following commands if the formula is hosted at GitHub
 
 ```sh
-$ brew install ffizer/tap/<formula>
+$ brew install ffizer/ffizer/<formula>
 ```
 
 Or
 
 ```sh
-$ brew tap ffizer/tap
+$ brew tap ffizer/ffizer
 $ brew install <formula>
 ```
 
 Invoke the following command if the formula is *not* hosted at GitHub
 
 ```sh
-brew tap ffizer/homebrew-tap 
+brew tap ffizer/homebrew-ffizer 
 brew install <formula>
 ```
 
@@ -25,20 +25,20 @@ brew install <formula>
 Invoke either of the following commands if the cask is hosted at GitHub
 
 ```sh
-$ brew install --cask ffizer/tap/<cask>
+$ brew install --cask ffizer/ffizer/<cask>
 ```
 
 Or
 
 ```sh
-$ brew tap ffizer/tap
+$ brew tap ffizer/ffizer
 $ brew install --cask <cask>
 ```
 
 Invoke the following command if the cask is *not* hosted at GitHub
 
 ```sh
-brew tap ffizer/homebrew-tap 
+brew tap ffizer/homebrew-ffizer 
 brew install --cask <formula>
 ```
 

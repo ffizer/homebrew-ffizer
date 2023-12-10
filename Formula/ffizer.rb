@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.9.0 at 2023-12-10T19:50:02.228274445Z
+# Generated with JReleaser 1.9.0 at 2023-12-10T21:31:03.723285401Z
 class Ffizer < Formula
   desc "ffizer is a files and folders initializer / generator."
   homepage "https://ffizer.github.io/ffizer/book/"
@@ -6,49 +6,30 @@ class Ffizer < Formula
   license "CC0-1.0"
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-aarch64-unknown-linux-gnu.tgz"
-    sha256 "0a90ce200ddc223f28a0b51f00d4cc87af01662d730a044e0e37eca599fd9957"
-
-    def install
-      bin.install "ffizer_2.12.0-aarch64-unknown-linux-gnu/ffizer" => "ffizer"
-    end
+    url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-aarch64-unknown-linux-gnu.zip"
+    sha256 "5112184b91cc359149e50810a4b56b5b51b06364ca08af4063acca3c43642fb4"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-x86_64-unknown-linux-gnu.tgz"
-    sha256 "ee9b74bf94d7c248da73a35f6124d8ef4d0f7810c505534ad1fae5e921755e06"
-
-    def install
-      bin.install "ffizer_2.12.0-x86_64-unknown-linux-gnu/ffizer" => "ffizer"
-    end
-  end
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-all-apple-darwin.tgz"
-    sha256 "e9e296ba8456548f36731f61c1d2ab3f01db85fb6bd8761a4067c39e7d97ccfe"
-
-    def install
-      bin.install "ffizer_2.12.0-all-apple-darwin/ffizer" => "ffizer"
-    end
+    url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-x86_64-unknown-linux-gnu.zip"
+    sha256 "623fd2ea0a85542bc80e2e2d12193b8c444b1648267dde256f9552f1740e6e50"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-aarch64-apple-darwin.tgz"
-    sha256 "6bfc7b7018ade778c4f2f996ab218920023aa04e10439b02bd2b0be96eacaa42"
-
-    def install
-      bin.install "ffizer_2.12.0-aarch64-apple-darwin/ffizer" => "ffizer"
-    end
+    url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-aarch64-apple-darwin.zip"
+    sha256 "89042d0531fe95f5a168d3a5ef7bd98e7c66b6714e326a81504d0623d23cda6f"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-x86_64-apple-darwin.tgz"
-    sha256 "f592753e595ad2e2b14b50d904fb90a3e8f8af1077ea882f5e64d6f312df6fb1"
-
-    def install
-      bin.install "ffizer_2.12.0-x86_64-apple-darwin/ffizer" => "ffizer"
-    end
+    url "https://github.com/ffizer/ffizer/releases/download/2.12.0/ffizer_2.12.0-x86_64-apple-darwin.zip"
+    sha256 "1ab2a4e90179e777f96a9b6f16db10416851b1615290c2cfcde19d1b873d0021"
   end
 
+
+  def install
+    libexec.install Dir["*"]
+    bin.install_symlink "#{libexec}/bin/ffizer" => "ffizer"
+  end
 
   test do
     output = shell_output("#{bin}/ffizer --version")
-    assert_match "ffizer 2.12.0", output
+    assert_match "2.12.0", output
   end
 end
