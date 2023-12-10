@@ -1,22 +1,48 @@
-# Homebrew for ffizer
+# Homebrew
 
-To install
-
-```sh
-brew install ffizer/ffizer/ffizer-bin
-```
-
-## Notes
-
-Documentation
-
-- [How to Create and Maintain a Tap — Homebrew Documentation](https://docs.brew.sh/How-to-Create-and-Maintain-a-Tap)
-- [Formula Cookbook — Homebrew Documentation](https://docs.brew.sh/Formula-Cookbook)
-- <https://www.rubydoc.info/github/Homebrew/brew/master/Formula>
-
-before submitting:
+## Formulae
+Invoke either of the following commands if the formula is hosted at GitHub
 
 ```sh
-brew test ffizer-bin
-brew audit --new-formula ffizer-bin
+$ brew install ffizer/tap/<formula>
 ```
+
+Or
+
+```sh
+$ brew tap ffizer/tap
+$ brew install <formula>
+```
+
+Invoke the following command if the formula is *not* hosted at GitHub
+
+```sh
+brew tap ffizer/homebrew-tap 
+brew install <formula>
+```
+
+## Casks
+Invoke either of the following commands if the cask is hosted at GitHub
+
+```sh
+$ brew install --cask ffizer/tap/<cask>
+```
+
+Or
+
+```sh
+$ brew tap ffizer/tap
+$ brew install --cask <cask>
+```
+
+Invoke the following command if the cask is *not* hosted at GitHub
+
+```sh
+brew tap ffizer/homebrew-tap 
+brew install --cask <formula>
+```
+
+If you get a dialog stating the cask is broken try installing with `--no-quarantine`.
+
+## Documentation
+`brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
