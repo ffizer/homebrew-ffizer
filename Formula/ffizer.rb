@@ -1,26 +1,26 @@
-# Generated with JReleaser 1.16.0 at 2025-01-13T15:45:59.417574402Z
+# Generated with JReleaser 1.20.0 at 2025-09-17T14:29:48.753644362Z
 
 class Ffizer < Formula
   desc "ffizer is a files and folders initializer / generator."
   homepage "https://ffizer.github.io/ffizer/book/"
-  version "2.13.1"
+  version "2.13.4"
   license "CC0-1.0"
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/ffizer/ffizer/releases/download/2.13.1/ffizer_2.13.1-aarch64-unknown-linux-gnu.zip"
-    sha256 "f5041e503dfb7fe87b5f2b8f7261b3a1ce6b674434adc32362d65ee52d4de954"
+    url "https://github.com/ffizer/ffizer/releases/download/2.13.4/ffizer_2.13.4-aarch64-unknown-linux-gnu.zip"
+    sha256 "008d7cbfbad3442665527aec436accc7e899561d54e43f522002c63a3a64aecd"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/ffizer/ffizer/releases/download/2.13.1/ffizer_2.13.1-x86_64-unknown-linux-gnu.zip"
-    sha256 "23f9cc9ca5ee1e39a86cb19d485db6bbdc12009330eb7cc3f2c6d95d6e6b77c0"
+    url "https://github.com/ffizer/ffizer/releases/download/2.13.4/ffizer_2.13.4-x86_64-unknown-linux-gnu.zip"
+    sha256 "e1c0b2c11be3957d471f8d1228ade03e235098bee527c9aaf46f807bab0c7ef9"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/ffizer/ffizer/releases/download/2.13.1/ffizer_2.13.1-aarch64-apple-darwin.zip"
-    sha256 "fbb50d29499fa845f165eaca14c4bdfb6a10373f371d0bd06029b68dfe137f5b"
+    url "https://github.com/ffizer/ffizer/releases/download/2.13.4/ffizer_2.13.4-aarch64-apple-darwin.zip"
+    sha256 "34c8148f4c1f8e3cccaf1613363aac37a2a976c1f2726fbe361002c3591a6f96"
   end
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/ffizer/ffizer/releases/download/2.13.1/ffizer_2.13.1-x86_64-apple-darwin.zip"
-    sha256 "16e057a22c29f2affacd701c483f7f6c69e06aa3b183e57d6c0fe0de9093c116"
+    url "https://github.com/ffizer/ffizer/releases/download/2.13.4/ffizer_2.13.4-x86_64-apple-darwin.zip"
+    sha256 "c457d0034c3397b12c258f21f7f325689daf12efd988f130a911c9d0b8a71457"
   end
 
 
@@ -31,6 +31,6 @@ class Ffizer < Formula
 
   test do
     output = shell_output("#{bin}/ffizer --version")
-    assert_match "2.13.1", output
+    assert_match "2.13.4", output
   end
 end
