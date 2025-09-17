@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.20.0 at 2025-09-17T14:29:48.753644362Z
+# Generated with JReleaser 1.20.0 at 2025-09-17T14:37:26.838754096Z
 
 class Ffizer < Formula
   desc "ffizer is a files and folders initializer / generator."
@@ -8,19 +8,19 @@ class Ffizer < Formula
 
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/ffizer/ffizer/releases/download/2.13.4/ffizer_2.13.4-aarch64-unknown-linux-gnu.zip"
-    sha256 "008d7cbfbad3442665527aec436accc7e899561d54e43f522002c63a3a64aecd"
+    sha256 "ec1ac87601d6efa75e48d68a7e77a93f6981e7d867d905ea0579d4eac8062f88"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/ffizer/ffizer/releases/download/2.13.4/ffizer_2.13.4-x86_64-unknown-linux-gnu.zip"
-    sha256 "e1c0b2c11be3957d471f8d1228ade03e235098bee527c9aaf46f807bab0c7ef9"
+    sha256 "cb107b598e076c79535e1a795939a28ca5a3c94eb22cd61c6879fe00fe6f8a51"
   end
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/ffizer/ffizer/releases/download/2.13.4/ffizer_2.13.4-aarch64-apple-darwin.zip"
-    sha256 "34c8148f4c1f8e3cccaf1613363aac37a2a976c1f2726fbe361002c3591a6f96"
+    sha256 "a81516397d1867a159a4daff29d0251eaf208bf57bbe23a363c2fb493d481d37"
   end
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/ffizer/ffizer/releases/download/2.13.4/ffizer_2.13.4-x86_64-apple-darwin.zip"
-    sha256 "c457d0034c3397b12c258f21f7f325689daf12efd988f130a911c9d0b8a71457"
+    sha256 "7ab2ff7010c6b76293ee0cdca73edd3cda3c9a27ba286e4747f93c0d9fe5380a"
   end
 
 
