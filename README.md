@@ -17,7 +17,7 @@ $ brew install <formula>
 Invoke the following command if the formula is *not* hosted at GitHub
 
 ```sh
-brew tap ffizer/homebrew-ffizer 
+brew tap ffizer/homebrew-ffizer https://github.com/ffizer/homebrew-ffizer.git
 brew install <formula>
 ```
 
@@ -38,7 +38,7 @@ $ brew install --cask <cask>
 Invoke the following command if the cask is *not* hosted at GitHub
 
 ```sh
-brew tap ffizer/homebrew-ffizer 
+brew tap ffizer/homebrew-ffizer https://github.com/ffizer/homebrew-ffizer.git
 brew install --cask <formula>
 ```
 
